@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardance Calculator Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <div class="header">
+                <span class="title">✦ Stardance ✦</span>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+
+            <div class="display" id="display">0</div>
+
+            <!-- Scientific row -->
+            <div class="buttons scientific-row">
+                <button class="sci" data-action="sin">sin</button>
+                <button class="sci" data-action="cos">cos</button>
+                <button class="sci" data-action="tan">tan</button>
+                <button class="sci" data-action="sqrt">√</button>
+                <button class="sci" data-action="power">^</button>
+                <button class="sci" data-action="pi">π</button>
+            </div>
+
+            <!-- Main buttons -->
+            <div class="buttons main-grid">
+                <button class="clear" data-action="clear">C</button>
+                <button class="delete" data-action="delete">⌫</button>
+                <button class="operator" data-action="operator">÷</button>
+                <button class="operator" data-action="operator">×</button>
+
+                <button data-action="number">7</button>
+                <button data-action="number">8</button>
+                <button data-action="number">9</button>
+                <button class="operator" data-action="operator">-</button>
+
+                <button data-action="number">4</button>
+                <button data-action="number">5</button>
+                <button data-action="number">6</button>
+                <button class="operator" data-action="operator">+</button>
+
+                <button data-action="number">1</button>
+                <button data-action="number">2</button>
+                <button data-action="number">3</button>
+                <button class="equals" data-action="equals">=</button>
+
+                <button class="zero" data-action="number">0</button>
+                <button data-action="decimal">.</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <span>History</span>
+                <button class="clear-history" id="clearHistory">Clear</button>
+            </div>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
