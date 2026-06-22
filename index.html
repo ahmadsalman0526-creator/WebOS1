@@ -1,69 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stardance Calculator Pro</title>
+    <title>My WebOS Desktop</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="desktop">
+        
+        <!-- Top Search Bar -->
+        <input id="desktop-search" placeholder="🔍 Search the web... (Press Enter)">
 
-    <div class="container">
-        <div class="calculator">
-            <div class="header">
-                <span class="title">✦ Stardance ✦</span>
-                <button class="theme-toggle" id="themeToggle">🌙</button>
+        <!-- Top Right Clock -->
+        <div id="clock-widget">Loading...</div>
+
+        <!-- Centered Desktop Icons -->
+        <div class="icon-grid">
+            
+            <div class="desktop-icon" data-app="notepad">
+                <div class="app-icon">📝</div>
+                <span>Notepad</span>
             </div>
 
-            <div class="display" id="display">0</div>
-
-            <!-- Scientific row -->
-            <div class="buttons scientific-row">
-                <button class="sci" data-action="sin">sin</button>
-                <button class="sci" data-action="cos">cos</button>
-                <button class="sci" data-action="tan">tan</button>
-                <button class="sci" data-action="sqrt">√</button>
-                <button class="sci" data-action="power">^</button>
-                <button class="sci" data-action="pi">π</button>
+            <div class="desktop-icon" data-app="calculator">
+                <div class="app-icon">🧮</div>
+                <span>Calculator</span>
             </div>
 
-            <!-- Main buttons -->
-            <div class="buttons main-grid">
-                <button class="clear" data-action="clear">C</button>
-                <button class="delete" data-action="delete">⌫</button>
-                <button class="operator" data-action="operator">÷</button>
-                <button class="operator" data-action="operator">×</button>
+            <div class="desktop-icon" data-app="stardance">
+                <div class="app-icon">✨</div>
+                <span>Stardance</span>
+            </div>
 
-                <button data-action="number">7</button>
-                <button data-action="number">8</button>
-                <button data-action="number">9</button>
-                <button class="operator" data-action="operator">-</button>
+            <div class="desktop-icon" data-app="tasklist">
+                <div class="app-icon">📋</div>
+                <span>Task Hub</span>
+            </div>
 
-                <button data-action="number">4</button>
-                <button data-action="number">5</button>
-                <button data-action="number">6</button>
-                <button class="operator" data-action="operator">+</button>
+            <div class="desktop-icon" data-app="hackatime">
+                <div class="app-icon">💻</div>
+                <span>Hackatime</span>
+            </div>
 
-                <button data-action="number">1</button>
-                <button data-action="number">2</button>
-                <button data-action="number">3</button>
-                <button class="equals" data-action="equals">=</button>
+            <div class="desktop-icon" data-app="youtube">
+                <div class="app-icon">🎥</div>
+                <span>YouTube</span>
+            </div>
 
-                <button class="zero" data-action="number">0</button>
-                <button data-action="decimal">.</button>
+            <div class="desktop-icon" data-app="settings">
+                <div class="app-icon">⚙️</div>
+                <span>Settings</span>
+            </div>
+
+        </div>
+
+        <!-- APP 1: NOTEPAD -->
+        <div id="window-notepad" class="window">
+            <div class="title-bar">
+                <span>📝 Notepad</span>
+                <button class="close-btn">x</button>
+            </div>
+            <div class="content">
+                <textarea id="notepad-textarea" placeholder="Write your notes..."></textarea>
             </div>
         </div>
 
-        <!-- History Panel -->
-        <div class="history-panel" id="historyPanel">
-            <div class="history-header">
-                <span>History</span>
-                <button class="clear-history" id="clearHistory">Clear</button>
+        <!-- APP 2: CALCULATOR -->
+        <div id="window-calculator" class="window">
+            <div class="title-bar">
+                <span>🧮 Calculator</span>
+                <button class="close-btn">x</button>
             </div>
-            <ul id="historyList"></ul>
+            <div class="content">
+                <div class="calc-screen">0</div>
+                <div class="calc-grid">
+                    <button class="calc-btn">C</button>
+                    <button class="calc-btn">/</button>
+                    <button class="calc-btn">*</button>
+                    <button class="calc-btn">-</button>
+                    <button class="calc-btn">7</button>
+                    <button class="calc-btn">8</button>
+                    <button class="calc-btn">9</button>
+                    <button class="calc-btn">+</button>
+                    <button class="calc-btn">4</button>
+                    <button class="calc-btn">5</button>
+                    <button class="calc-btn">6</button>
+                    <button class="calc-btn">=</button>
+                    <button class="calc-btn">1</button>
+                    <button class="calc-btn">2</button>
+                    <button class="calc-btn">3</button>
+                    <button class="calc-btn">.</button>
+                    <button class="calc-btn">0</button>
+                    <button class="calc-btn">%</button>
+                </div>
+            </div>
         </div>
+
+        <!-- APP 3: STARDUST -->
+        <div id="window-stardance" class="window">
+            <div class="title-bar">
+                <span>✨ Stardance</span>
+                <button class="close-btn">x</button>
+            </div>
+            <div class="content">
+                <div class="link-container">
+                    <p>Ready for Hack Club?</p>
+                    <a href="https://hackclub.com" target="_blank">🚀 Visit Hackclub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- APP 4: TASK HUB -->
+        <div id="window-tasklist" class="window">
+            <div class="title-bar">
+                <span>📋 Task Hub</span>
+                <button class="close-btn">x</button>
+            </div>
+            <div class="content">
+                <div class="task-input-row">
+                    <input id="task-input" placeholder="Add a task...">
+                    <button id="add-task-btn">+ Add</button>
+                </div>
+                <ul id="task-list">
+                    <!-- Task items here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- APP 5: HACKATIME -->
+        <div id="window-hackatime" class="window">
+            <div class="title-bar">
+                <span>💻 Hackatime</span>
+                <button class="close-btn">x</button>
+            </div>
+            <div class="content">
+                <div class="link-container">
+                    <p>Track your coding stats!</p>
+                    <a href="https://hackatime.hackclub.com" target="_blank">Open Hackatime</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- APP 6: YOUTUBE -->
+        <div id="window-youtube" class="window">
+            <div class="title-bar">
+                <span>🎥 YouTube</span>
+                <button class="close-btn">x</button>
+            </div>
+            <div class="content">
+                <div class="link-container">
+                    <p>Watch videos!</p>
+                    <a href="https://www.youtube.com" target="_blank">Go to YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- APP 7: SETTINGS -->
+        <div id="window-settings" class="window">
+            <div class="title-bar">
+                <span>⚙️ Settings</span>
+                <button class="close-btn">x</button>
+            </div>
+            <div class="content">
+                <p>Background Style</p>
+                <div class="color-presets">
+                    <div class="color-btn"></div>
+                    <div class="color-btn"></div>
+                    <div class="color-btn"></div>
+                    <div class="color-btn"></div>
+                </div>
+                <div>
+                    <span>Pick custom: </span>
+                    <input type="color">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Left Settings Trigger Button -->
+        <button id="settings-trigger">⚙️ Settings</button>
+
     </div>
 
+    <!-- Link to your JS file -->
     <script src="script.js"></script>
 </body>
 </html>
