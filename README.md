@@ -1,4 +1,4 @@
-WebOS 1 Desktop 🚀
+WebOS 1 Desktop.
 This is an OS UI built using only the browser with no dependencies on anything else. The goal of creating this project was to design a very customizable work environment, which includes glass-morphism windows, applications, and fast access to Hackclub’s ecosystem. This project was done for Hackclub Stardance WebOS 1 challenge.
 - Draggable Windows: The windows can be dragged by their title bars; when clicked, they come to the foreground (Z-index).
 - Notepad App: A simple app where you can write down some notes.
